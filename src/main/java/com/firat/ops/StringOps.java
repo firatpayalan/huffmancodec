@@ -22,6 +22,7 @@ public class StringOps {
             }
         }
         MapOps.getInstance().printKeyVal(frequenciesMap);
+        frequenciesMap = (HashMap<Character, Integer>) MapOps.getInstance().sortByValue(frequenciesMap);
         return frequenciesMap;
     }
 
