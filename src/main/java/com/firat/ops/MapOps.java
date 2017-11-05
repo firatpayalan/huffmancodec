@@ -1,9 +1,6 @@
 package com.firat.ops;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class MapOps {
@@ -21,6 +18,7 @@ public class MapOps {
     }
     //for descending order->
     //.sorted(Map.Entry.comparingByValue(/*Collections.reverseOrder()*/))
+    //type inference
     public <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map)
     {
         return map.entrySet().stream()
@@ -30,6 +28,7 @@ public class MapOps {
                         Map.Entry::getValue,
                         (k,v) -> k, LinkedHashMap::new
                 ));
+
     }
 
     public static MapOps getInstance()
