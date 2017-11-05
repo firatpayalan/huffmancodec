@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * how algorithm works...
+ * http://www.geeksforgeeks.org/huffman-decoding/
+ *
+ *
  * https://stackoverflow.com/questions/19330731/tree-implementation-in-java-root-parents-and-children
  * import java.util.List;
  * Node<String> parentNode = new Node<String>("Parent");
