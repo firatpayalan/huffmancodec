@@ -21,7 +21,7 @@ public class StringOps {
                 frequenciesMap.put(currentChar,currentValue);
             }
         }
-        HashOps.getInstance().printKeyVal(frequenciesMap);
+        MapOps.getInstance().printKeyVal(frequenciesMap);
         return frequenciesMap;
     }
 

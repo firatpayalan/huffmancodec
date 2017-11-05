@@ -3,11 +3,11 @@ package com.firat.ops;
 import java.util.Collections;
 import java.util.HashMap;
 
-public class HashOps {
+public class MapOps {
     //meet the singleton
-    private static HashOps instance = new HashOps();
+    private static MapOps instance = new MapOps();
     //prevents initializing
-    private HashOps() {}
+    private MapOps() {}
 
     public void printKeyVal(HashMap<?,?> map )
     {
@@ -17,7 +17,7 @@ public class HashOps {
             System.out.println("EMPTY MAP !!!!");
     }
 
-    public static HashOps getInstance()
+    public static MapOps getInstance()
     {
         return instance;
     }
