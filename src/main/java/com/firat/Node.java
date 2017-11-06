@@ -59,7 +59,7 @@ public class Node<T> {
     {
         this.data=data;
     }
-    public Node(T data,Node<T> parent)
+    public Node(T data, Node<T> parent)
     {
         this.data=data;
         this.parent=parent;
