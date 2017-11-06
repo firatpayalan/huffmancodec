@@ -6,20 +6,49 @@ import com.firat.Node;
 import com.firat.observer.StackObservable;
 import com.firat.observer.StackObserver;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 
 public class TreeOps {
     private static  TreeOps instance = new TreeOps();
 
     private TreeOps(){}
 
-    public <T> Node<T> constructHuffmanTree(HashMap<Character,Integer> sortedFrequencyMap)
-    {
-        return null;
-    }
+//    public <T> Node<T> constructHuffmanTree(HashMap<Character,Integer> sortedFrequencyMap)
+//    {
+//        List<Member> memberList= (List<Member>)(List<?>)MapOps.getInstance().convertToList(sortedFrequencyMap);
+//        //linkedlist acts as a queue type.
+//        LinkedList<Member> orderedList = ListOps.getInstance().listToQueue(memberList);
+//        int num=0;
+//        Member lastMember=null;
+//        Node<Member> child1=null;
+//        while (orderedList.size()>0)
+//        {
+//            Member currentMember = orderedList.getFirst();
+//
+//            if (lastMember!=null)
+//            {
+//                if (currentMember.getFrequency()>=lastMember.getFrequency())
+//                {
+//                    Node<Member> child2 = new Node<Member>(lastMember);
+//                    //set new parent.
+//                    Node<Member>parent = new Node<Member>(new Member('#',currentMember.getValue()+lastMember.getValue()));
+//                    parent.addChild(child1);
+//                    parent.addChild(child2);
+//                    orderedList.removeFirst();
+//                    orderedList.removeFirst();
+////                    orderedList.addFirst(new Member('#',currentMember.getValue()+lastMember.getValue()));
+//                    currentMember = new Member('#',currentMember.getValue()+lastMember.getValue());
+//
+//                }
+//            }
+//
+//            child1 = new Node<Member>(currentMember);
+//            lastMember = currentMember;
+//
+//        }
+//
+//
+//    }
 
 
 //    public <T> Node<T> constructHuffmanTree(HashMap<Character,Integer> sortedFrequencyMap)
