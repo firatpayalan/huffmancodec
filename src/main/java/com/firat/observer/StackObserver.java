@@ -14,6 +14,12 @@ public class StackObserver implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
+        int stackSize = ((StackObservable) o).getStack().size();
+        if (stackSize==2)
+        {
+
+
+        }
         System.out.println(((StackObservable) o).getStack().size());
     }
 }

@@ -14,10 +14,13 @@ public class Test {
         observable.addObserver(observer);
 
         stack.push(new Object());
-        stack.push(new Object());
+        observable.setStack(stack);
+
         stack.push(new Object());
         observable.setStack(stack);
 
+        stack.push(new Object());
+        observable.setStack(stack);
 
     }
 
