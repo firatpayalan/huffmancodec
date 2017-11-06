@@ -1,6 +1,7 @@
 import com.firat.Member;
 import com.firat.observer.StackObservable;
 import com.firat.observer.StackObserver;
+import com.firat.ops.ListOps;
 import com.firat.ops.MapOps;
 import com.firat.ops.StringOps;
 
@@ -52,7 +53,7 @@ public class Test {
     }
 
     @org.junit.Test
-    public void mapToList()
+    public void mapToListToLinkedList()
     {
         String text = "comolokko";
         HashMap<Character,Integer> frequenciesMap = new HashMap<>();
@@ -74,6 +75,7 @@ public class Test {
         getInstance().printKeyVal(frequenciesMap);
         frequenciesMap = (HashMap<Character, Integer>) getInstance().sortByValue(frequenciesMap);
         List<Member> memberList= (List<Member>)(List<?>)MapOps.getInstance().convertToList(frequenciesMap);
+        ListOps.getInstance().listToQueue(memberList);
         System.out.println();
     }
     public static void printAll(TreeMap<String, Double> treeMap){

@@ -16,6 +16,11 @@ public class TreeOps {
 
     private TreeOps(){}
 
+    public <T> Node<T> constructHuffmanTree(HashMap<Character,Integer> sortedFrequencyMap)
+    {
+        return null;
+    }
+
 
 //    public <T> Node<T> constructHuffmanTree(HashMap<Character,Integer> sortedFrequencyMap)
 //    {
