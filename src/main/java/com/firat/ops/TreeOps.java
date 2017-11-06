@@ -16,6 +16,7 @@ public class TreeOps {
 
     private TreeOps(){}
 
+
 //    public <T> Node<T> constructHuffmanTree(HashMap<Character,Integer> sortedFrequencyMap)
 //    {
 //        Stack processingOrder = new Stack();
@@ -53,6 +54,7 @@ public class TreeOps {
 //            lastElement = currentElement;
 //        }
 //    }
+
 
     public static TreeOps getInstance() {
         return instance;

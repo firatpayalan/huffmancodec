@@ -4,7 +4,7 @@ package com.firat;
  */
 public class Member {
     private char value;
-    private int frequency;
+    private Integer frequency;
 
     public Member(char value,int frequency)
     {

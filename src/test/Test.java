@@ -1,9 +1,12 @@
+import com.firat.Member;
 import com.firat.observer.StackObservable;
 import com.firat.observer.StackObserver;
+import com.firat.ops.MapOps;
+import com.firat.ops.StringOps;
 
-import java.util.Map;
-import java.util.Stack;
-import java.util.TreeMap;
+import java.util.*;
+
+import static com.firat.ops.MapOps.getInstance;
 
 public class Test {
 
@@ -46,6 +49,32 @@ public class Test {
         treeMap.put("Paradise Regained", 23.56);
         printAll(treeMap);
 
+    }
+
+    @org.junit.Test
+    public void mapToList()
+    {
+        String text = "comolokko";
+        HashMap<Character,Integer> frequenciesMap = new HashMap<>();
+
+        char[] array = text.toCharArray();
+        for (char currentChar:array)
+        {
+            //new character
+            if (frequenciesMap.get(currentChar) == null)
+                frequenciesMap.put(currentChar,1);
+                //locates and increment by one
+            else
+            {
+                Integer currentValue = frequenciesMap.get(currentChar).intValue();
+                currentValue = currentValue+1;
+                frequenciesMap.put(currentChar,currentValue);
+            }
+        }
+        getInstance().printKeyVal(frequenciesMap);
+        frequenciesMap = (HashMap<Character, Integer>) getInstance().sortByValue(frequenciesMap);
+        List<Member> memberList= (List<Member>)(List<?>)MapOps.getInstance().convertToList(frequenciesMap);
+        System.out.println();
     }
     public static void printAll(TreeMap<String, Double> treeMap){
         for(Map.Entry<String, Double> et:treeMap.entrySet()){

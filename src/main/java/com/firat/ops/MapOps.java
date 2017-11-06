@@ -31,6 +31,11 @@ public class MapOps {
 
     }
 
+    public <K,V> List<Map.Entry<K, V>> convertToList(HashMap<K,V> map)
+    {
+        return map.entrySet().stream().collect(Collectors.toList());
+    }
+
     public static MapOps getInstance()
     {
         return instance;
