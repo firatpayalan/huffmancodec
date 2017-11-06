@@ -1,5 +1,6 @@
 package com.firat.ops;
 
+import com.firat.HuffmanEntry;
 import com.firat.Member;
 import com.firat.Node;
 import com.firat.observer.StackObservable;
@@ -25,20 +26,30 @@ public class TreeOps {
 //        //end of registration
 //        Iterator<Map.Entry<Character,Integer>> mapIterator =  sortedFrequencyMap.entrySet().iterator();
 //        Map.Entry<Character,Integer> lastElement=null;
+//        Node<Member> child1=null;
 //        while (mapIterator.hasNext())
 //        {
-//            Map.Entry<Character,Integer> currentElement = mapIterator.next();
+////            Map.Entry<Character,Integer> currentElement = mapIterator.next();
+//            HuffmanEntry<Character,Integer> currentElement = (HuffmanEntry<Character, Integer>) mapIterator.next();
 //            if (lastElement!=null)
 //            {
 //                if (currentElement.getValue() >= lastElement.getValue())
 //                {
-//                    if (processingOrder.size()<2)
-//                    {
-//                        processingOrder.push(new Member(currentElement.getKey(),currentElement.getValue()));
-//                        observable.setStack(processingOrder);
-//                    }
+//                    Node<Member> child2 = new Node<Member>(new Member(lastElement.getKey(),lastElement.getValue()));
+//                    //set new parent.
+//                    Node<Member>parent = new Node<Member>(new Member(currentElement.getValue()+lastElement.getValue()));
+//                    parent.addChild(child1);
+//                    parent.addChild(child2);
+//                    HuffmanEntry<Character,Integer> parentAsChild = new HuffmanEntry<Character, Integer>('#',parent.getData().getFrequency());
+//                    currentElement=parentAsChild;
 //                }
+////                else
+////                {
+////                    child1 = new Node<Member>(new Member(currentElement.getKey(),currentElement.getValue()));
+////                }
 //            }
+//            //new kid
+//            child1 = new Node<Member>(new Member(currentElement.getKey(),currentElement.getValue()));
 //            lastElement = currentElement;
 //        }
 //    }
